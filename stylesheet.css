@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Dosis", sans-serif;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+.container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.one {
+  font-size: 1.125em;
+  line-height: 1.6;
+  color: #333;
+  background: #ddd;
+  background-size: 300%;
+  background-image: linear-gradient(90deg, #b168d4, #5f6db2, #757ce8, #f73378, #ab003c);
+  background-size: 400%;
+  animation: bg-animation 18s infinite alternate;
+}
+
+.two {
+  font-size: 1.125em;
+  line-height: 1.6;
+  color: #333;
+  background: #ddd;
+  background-size: 300%;
+  background-image: linear-gradient(90deg, #ab003c, #fcb32b, #ded092, #d46868, #f50057);
+  background-size: 400%;
+  animation: bg-animation 18s infinite alternate;
+}
+
+.three {
+  font-size: 1.125em;
+  line-height: 1.6;
+  color: #333;
+  background: #ddd;
+  background-size: 300%;
+  background-image: linear-gradient(90deg, #f50057, #e8712e, #b85f12, #002884, #6de3c7);
+  background-size: 400%;
+  animation: bg-animation 18s infinite alternate;
+}
+
+.four {
+  font-size: 1.125em;
+  line-height: 1.6;
+  color: #333;
+  background: #ddd;
+  background-size: 300%;
+  background-image: linear-gradient(90deg, #6de3c7, #6dc9e3, #21b50d, #762ee8, #ff4096);
+  background-size: 400%;
+  animation: bg-animation 18s infinite alternate;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+.content {
+  background: white;
+  width: 70vw;
+  padding: 3em;
+  box-shadow: 0 0 3em rgba(0, 0, 0, 0.15);
+  margin-top: 4em;
+}
+
+.title {
+  margin: 0 0 0.5em;
+  padding-bottom: 0.6em;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 3rem;
+  color: black;
+  line-height: 0.8;
+  margin: 0;
+  background-image: linear-gradient(90deg, black, #757ce8, #3f50b5, darkgrey, #454647);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 400%;
+  animation: bg-animation 15s infinite alternate;
+}
+
+.title:hover {
+  background-position: right;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fun {
+  color: white;
+  border: 0;
+  cursor: pointer;
+  padding: 0.5em 1.25em;
+  background: linear-gradient(90deg, #b168d4, #5f6db2, #757ce8, darkgrey, grey, #454647);
+  background-size: 300%;
+  background-position: left;
+  transition: background-position 1s;
+  border-radius: 2em;
+}
+
+.fun:hover {
+  background-position: right;
+}
