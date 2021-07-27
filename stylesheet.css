@@ -121,3 +121,93 @@ section {
 .fun:hover {
   background-position: right;
 }
+
+nav {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  min-height: 2.8em;
+  align-items: center;
+  padding-left: 4em;
+  background-image: transparent;
+  background-size: 400%;
+  animation: bg-animation 18s infinite alternate;
+}
+
+.logo {
+  width: 8%;
+  height: 5%;
+}
+
+.text-logo {
+  color: white;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2em;
+  line-height: 2.1em;
+  letter-spacing: 0.115em;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  padding-right: 5%;
+  margin: 0;
+  color: white !important;
+  cursor: pointer;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li a {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3em;
+  line-height: 110.7%;
+  letter-spacing: 0.035em;
+
+  text-decoration: none;
+}
+
+.nav-links a {
+  float: left;
+  display: block;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: white;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
