@@ -129,31 +129,37 @@ nav {
   min-height: 2.8em;
   align-items: center;
   padding-left: 4em;
+  padding-right: 2em;
   background-image: transparent;
   background-size: 400%;
   animation: bg-animation 18s infinite alternate;
 }
 
 .logo {
-  width: 8%;
+  width: 80%;
   height: 5%;
 }
 
 .text-logo {
   color: white;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 2em;
   line-height: 2.1em;
   letter-spacing: 0.115em;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.logo-img{
+  display: none;
 }
 
 .nav-links {
   display: flex;
   justify-content: space-around;
-  width: 50%;
-  padding-right: 5%;
+  width: 40%;
+  padding-right: 1em;
   margin: 0;
   color: white !important;
   cursor: pointer;
@@ -169,7 +175,6 @@ nav {
   font-size: 1.3em;
   line-height: 110.7%;
   letter-spacing: 0.035em;
-
   text-decoration: none;
 }
 
@@ -195,7 +200,7 @@ nav {
 }
 
 .hover-underline-animation:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -210,4 +215,40 @@ nav {
 .hover-underline-animation:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+@media only screen and (max-width: 75em) {
+  
+  .logo{
+    width: 0;
+    
+  }
+
+  nav {
+    padding-left: 1em;
+    padding-right: 0;
+  }
+
+  .logo-img{
+    display: block;
+    width: 2.5em;
+    height: 2.5em;
+    margin-top: 0.5em
+  }
+  .text-logo {
+    display: none;
+  }
+  .nav-links {
+    width: 80%;
+  }
+
+  .nav-links li a {
+    font-size: 1.1em;
+    padding-right: 0.5em;
+  }
+  .title {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.1em;
+  }
 }
